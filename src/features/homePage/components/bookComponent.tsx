@@ -18,7 +18,7 @@ const BookComponent = (props: BookProps): JSX.Element => {
     return (
       <div className="book-shelf-changer">
         <select
-          value={book.shelf}
+          value={book.shelf ?? ShelfType.None}
           onChange={(event) => bookShelfOnSelect(event.target.value)}
         >
           <option value="none" disabled>
@@ -27,7 +27,7 @@ const BookComponent = (props: BookProps): JSX.Element => {
           <option value="currentlyReading">Currently Reading</option>
           <option value="wantToRead">Want to Read</option>
           <option value="read">Read</option>
-          <option value="none">None</option>
+          <option value="noShelf">None</option>
         </select>
       </div>
     );

@@ -7,6 +7,7 @@ export enum ShelfType {
     CurrentlyReading = "currentlyReading",
     WantToRead = "wantToRead",
     Read = "read",
+    None = "noShelf"
 }
 
 export const Shelves = [ShelfType.CurrentlyReading, ShelfType.WantToRead ,ShelfType.Read];
